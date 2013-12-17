@@ -35,8 +35,11 @@ if __name__ == "__main__":
 
   print """<html><head>
    <title>MapFactor OSM Data Processing - roundabouts report 2013.12</title>
-</head><body>
-<h1>MapFactor OSM Data Processing - roundabouts report 2013.12</h1>
+</head><body> <h1>MapFactor OSM Data Processing - roundabouts report
+2013.12</h1> <b>Roundabouts</b><br>MapFactor expects that roundabouts
+are closed circles. If it is not true at least navigation is confused. In the
+worse case it was even causing crashes. Here is a list of some problematic
+links:<br>
 """
   for filename in sys.argv[1:]:
     ways = extractRoundabouts( open(filename) )
