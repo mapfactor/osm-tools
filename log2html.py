@@ -3,6 +3,7 @@
   usage:
      ./log2html <logfile1> [<logfile2>|...] > output.html
 """
+import os
 import sys
 
 def extractRoundabouts( lines ):
@@ -40,6 +41,6 @@ if __name__ == "__main__":
   for filename in sys.argv[1:]:
     ways = extractRoundabouts( open(filename) )
     if ways:
-      print reportWays( filename, ways )
+      print reportWays( os.path.basename(filename), ways )
   print "</body>"
 
